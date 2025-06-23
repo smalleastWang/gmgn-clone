@@ -1,0 +1,9 @@
+:root {
+  --color-bg-100: 17 18 20;
+  --color-text-100: 240 245 245;
+}
+
+body {
+  color: rgb(var(--color-text-100));
+  background: rgb(var(--color-bg-100));
+}
