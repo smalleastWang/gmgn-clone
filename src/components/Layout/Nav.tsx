@@ -1,42 +1,39 @@
 import React, { useState } from 'react';
-import { Search } from 'lucide-react';
+import { Search, ChevronDown } from 'lucide-react';
 import LoginModal from '../LoginModal';
-import RegisterModal from '../Register';
+import RegisterModal from '../RegisterModal';
 import './style.scss'
 import { DropdownMenu, DropdownMenuPortal, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu';
+import logo from '@/assets/logo_small.svg'
+import solana from '@/assets/solana.webp'
+import ether from '@/assets/ether.webp'
+import base from '@/assets/base.webp'
+import bsc from '@/assets/bsc.svg'
+import tron from '@/assets/tron.webp'
+import Select from '@/components/Select';
 
 export default function Nav() {
   const [isAnimation, setAnimation] = useState(true);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
+  const chainOptions = [
+    {icon: solana, label: 'SOL', value: 'solana'},
+    {icon: ether, label: 'ETH', value: 'ether'},
+    {icon: base, label: 'Base', value: 'base'},
+    {icon: bsc, label: 'BSC', value: 'bsc'},
+    {icon: tron, label: 'Tron', value: 'tron'},
+  ]
+  const [chainValue, setChainValue] = useState(chainOptions[0].value);
   return (
     <div className="trading-header">
       <div className="header-left">
-        <div className="logo">🐸</div>
-        <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <button className="px-3 py-2 bg-blue-500 text-white rounded">
-            Open
-          </button>
-        </DropdownMenuTrigger>
-          <DropdownMenuPortal>
-            <DropdownMenuContent
-              sideOffset={5}
-              className="rounded-md bg-gray-600 p-2"
-            >
-              <DropdownMenuItem >
-                Profile
-              </DropdownMenuItem>
-              <DropdownMenuItem >
-                Settings
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                Logout
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenuPortal>
-
-        </DropdownMenu>
+        <img className="logo" src={logo} alt="logo" width={24} height={24} />
+        <Select 
+          options={chainOptions}
+          value={chainValue}
+          onChange={setChainValue}
+        />
+        
         {/* <div className="network-selector">
           <div className="network-icon">≡</div>
           <span>SOL</span>
