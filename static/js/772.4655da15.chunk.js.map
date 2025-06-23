@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/772.4655da15.chunk.js","mappings":"iJAAA,MAOA,EAPgBA,KAEZC,EAAAA,EAAAA,KAAA,OAAAC,UACED,EAAAA,EAAAA,KAAA,MAAAC,SAAI,kB","sources":["pages/Trading/Holding.tsx"],"sourcesContent":["const Holding = () => {\n  return (\n    <div>\n      <h1>持仓</h1>\n    </div>\n  )\n}\nexport default Holding"],"names":["Holding","_jsx","children"],"sourceRoot":""}
