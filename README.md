@@ -33,11 +33,13 @@ gmgn-clone
 │   ├── utils        <span style="color:#999; margin-left: 72px;">工具函数</span>
 ├── package.json
 └── tailwind.config.js
+
 # 📱  UX 流程文档
 
 > 本文档用于指导 GMGN.AI Web 克隆项目的用户体验设计与前端开发，实现与原版一致的交互流程与页面结构。目标是快速开发并部署像素级还原版本，用于展示、演示或商业化 MVP。
 
 ---
+#### [github访问地址](https://smalleastWang.github.io/gmgn-clone)
 
 ## 🎯 一、用户画像（Persona）
 
