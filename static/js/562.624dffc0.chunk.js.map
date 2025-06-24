@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/562.624dffc0.chunk.js","mappings":"iJAAA,MAOA,EAPeA,KAEXC,EAAAA,EAAAA,KAAA,OAAAC,UACED,EAAAA,EAAAA,KAAA,MAAAC,SAAI,kB","sources":["pages/Trading/Follow.tsx"],"sourcesContent":["const Follow = () => {\n  return (\n    <div>\n      <h1>持仓</h1>\n    </div>\n  )\n}\nexport default Follow"],"names":["Follow","_jsx","children"],"sourceRoot":""}

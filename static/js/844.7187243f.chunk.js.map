@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/844.7187243f.chunk.js","mappings":"iJAAA,MAOA,EAPcA,KAEVC,EAAAA,EAAAA,KAAA,OAAAC,UACED,EAAAA,EAAAA,KAAA,MAAAC,SAAI,kB","sources":["pages/Trading/Trend.tsx"],"sourcesContent":["const Trend = () => {\n  return (\n    <div>\n      <h1>持仓</h1>\n    </div>\n  )\n}\nexport default Trend"],"names":["Trend","_jsx","children"],"sourceRoot":""}

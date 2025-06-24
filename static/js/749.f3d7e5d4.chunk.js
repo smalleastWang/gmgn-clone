@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgmgn_clone=self.webpackChunkgmgn_clone||[]).push([[749],{599:(e,s,a)=>{a.d(s,{A:()=>c});a(666);const c=a.p+"static/media/nodata3.9dbabd16a878971b4e829996d9eb435d.svg"},749:(e,s,a)=>{a.r(s),a.d(s,{default:()=>n});var c=a(599),t=a(562);const n=()=>(0,t.jsx)("div",{className:"flex justify-center items-center mt-20",children:(0,t.jsx)("img",{src:c.A,className:"chakra-image css-1wsuzl7"})})}}]);
+//# sourceMappingURL=749.f3d7e5d4.chunk.js.map

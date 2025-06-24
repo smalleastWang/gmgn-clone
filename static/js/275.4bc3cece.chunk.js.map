@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/275.4bc3cece.chunk.js","mappings":"iJAAA,MAOA,EAPgBA,KAEZC,EAAAA,EAAAA,KAAA,OAAAC,UACED,EAAAA,EAAAA,KAAA,MAAAC,SAAI,kB","sources":["pages/Trading/NewPair.tsx"],"sourcesContent":["const NewPair = () => {\n  return (\n    <div>\n      <h1>持仓</h1>\n    </div>\n  )\n}\nexport default NewPair"],"names":["NewPair","_jsx","children"],"sourceRoot":""}
