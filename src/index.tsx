@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/tailwind.css';
+import '@rainbow-me/rainbowkit/styles.css';
 import './styles/global.scss';
 // import reportWebVitals from './reportWebVitals';
 import AppRouter from 'routes/Router';

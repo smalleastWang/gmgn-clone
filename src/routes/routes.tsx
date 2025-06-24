@@ -20,7 +20,7 @@ const routes: RouteObject[] = [
         element: <LazyComponents.Trend />,
       },
       {
-        path: '/discover',
+        path: '/trade',
         element: <LazyComponents.Discover />,
       },
       {
@@ -34,6 +34,10 @@ const routes: RouteObject[] = [
       {
         path: '/holding',
         element: <LazyComponents.Holding />,
+      },
+      {
+        path: '/address',
+        element: <LazyComponents.Wallet />,
       },
     ]
   },

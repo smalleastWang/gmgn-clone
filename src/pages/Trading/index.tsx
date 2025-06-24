@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Search, Filter, Zap, Crown, Copy } from 'lucide-react';
 import './trading.scss';
-import Layout from '@/components/Layout';
 
 const Trading = () => {
   const [selectedSort, setSelectedSort] = useState('新创建');
-  const [selectedFilter, setSelectedFilter] = useState('0');
+  const [selectedFilter] = useState('0');
 
   const tokens = [
     {

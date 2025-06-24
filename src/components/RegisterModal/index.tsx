@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { X, Eye, EyeOff, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
 import './style.scss';
 import { cn } from '@/utils/utils';
+import { userStore } from '@/store/user';
 
 interface RegisterModalProps {
   isOpen: boolean;
@@ -11,7 +12,8 @@ interface RegisterModalProps {
 }
 
 const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose, onSwitchToLogin, isAnimation }) => {
-  const [showPassword, setShowPassword] = useState(false);
+  // const [showPassword, setShowPassword] = useState(false);
+  const {setLoginStatus} = userStore();
   const [formData, setFormData] = useState({
     email: '',
     inviteCode: ''
@@ -27,6 +29,8 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose, onSwitch
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('注册:', formData);
+    setLoginStatus(true)
+    onClose();
   };
 
   if (!isOpen) return null;
@@ -116,8 +120,10 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose, onSwitch
 
           <div className="bottom-links">
             <div className="footer-links">
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a href="#" className="footer-link">服务条款</a>
               <span style={{color: '#666'}}>|</span>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a href="#" className="footer-link">隐私政策</a>
             </div>
           </div>

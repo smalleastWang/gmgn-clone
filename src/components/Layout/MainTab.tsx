@@ -17,8 +17,8 @@ export default function MainTab() {
       title: '热门',
     },
     {
-      path: '/discover',
-      title: '探索',
+      path: '/trade',
+      title: '跟单',
     },
     {
       path: '/monitor',

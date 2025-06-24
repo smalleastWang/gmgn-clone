@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Eye, EyeOff, Send, QrCode } from 'lucide-react';
 import './style.scss';
 import { cn } from '@/utils/utils';
+import { userStore } from '@/store/user';
+import { useWallet } from '@/hooks/useWallet';
 
 interface LoginModalProps {
   isOpen: boolean;
@@ -12,6 +14,8 @@ interface LoginModalProps {
 
 const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onSwitchToRegister, isAnimation }) => {
   const [showPassword, setShowPassword] = useState(false);
+  const {setLoginStatus, setToken} = userStore();
+  const {connect} = useWallet();
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -27,9 +31,20 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onSwitchToRegi
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('登录:', formData);
+    setLoginStatus(true);
+    onClose();
   };
 
+  
   if (!isOpen) return null;
+
+  const handleConnect = async () => {
+
+    await connect();
+    setLoginStatus(true)
+    setToken('123456')
+    onClose();
+  }
 
   return (
     <div className={cn('login-modal-overlay', { 'not-animation': !isAnimation })}  onClick={onClose}>
@@ -132,13 +147,16 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onSwitchToRegi
           </div>
 
           <div className="bottom-links">
-            <a className="wallet-link">
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a className="wallet-link" onClick={handleConnect}>
               连接插件钱包交易 <span className="arrow">→</span>
             </a>
             
             <div className="footer-links">
-              <a   href="#" className="footer-link">服务条款</a>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              <a href="#" className="footer-link">服务条款</a>
               <span style={{color: '#333'}}>|</span>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a href="#" className="footer-link">隐私政策</a>
             </div>
           </div>
